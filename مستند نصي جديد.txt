@@ -1,0 +1,17 @@
+APIKEY: usFtZkunrdFZaAg0Lg116HlGkMVvYkAmJAVpGEzWn1Kg
+
+Region: us-south
+
+models:https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-models
+================================================================
+
+from ibm_watson import TextToSpeechV1
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+
+authenticator = IAMAuthenticator('dCz7FJEEfp-jzvuhWMUXbytEv0AeRFf7mpejygtvz3Rn')
+text_to_speech = TextToSpeechV1(
+    authenticator=authenticator
+)
+
+text_to_speech.set_service_url('https://api.us-south.text-to-speech.watson.cloud.ibm.com/instances/56cf5e70-ebdd-44c0-a722-55aa005d99be')
+================================================================
